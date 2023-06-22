@@ -1,0 +1,38 @@
+@charset "UTF-8";
+.main-logo{
+	display: flex;
+	justify-content: center;
+}
+.main-nav{
+	background-color: black;	
+}
+.main-nav ul{
+	display : flex;
+	/*기본값이라서 따로 적지않는게 보통, 단 세로배치할때만 column*/
+	flex-direction:row;
+}
+.main-nav a{
+	color: white;
+	text-decoration: none;
+}
+.extra-nav{
+	background-color:#fafafa;
+}
+.extra-nav ul{
+	display : flex;
+	justify-content: center;
+	/*기본값이라서 따로 적지않는게 보통, 단 세로배치할때만 column*/
+	flex-direction:row;
+}
+
+.extra-nav a{
+	color:#666;
+	text-decoration: none;
+}
+
+.sub-logo{
+	text-align:center;
+}
+.site-info p{
+	text-align :center;
+}
