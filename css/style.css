@@ -1,25 +1,195 @@
 @charset "UTF-8";
+a{
+	color: inherit;
+	text-decoration:none;
+}
+
+ul{
+	list-style-type: none;
+}
 .main-logo{
 	display: flex;
 	justify-content: center;
 }
+/*=========hero========*/
+.hero-img{
+	height: 355px;
+	position:relative;
+	font-size: 0;
+}
+.model{
+	position:absolute;
+	right:10%;
+	bottom:0;
+	z-index:9;
+}
+.bg{
+	position: absolute;
+	bottom:0;
+	width: 100%;
+	display:flex;
+	justify-content:center ;
+	background:rgb(0,111,255);
+	overflow:hidden;
+}
 .main-nav{
 	background-color: black;	
+	padding: 1rem 0;
 }
 .main-nav ul{
 	display : flex;
 	/*기본값이라서 따로 적지않는게 보통, 단 세로배치할때만 column*/
+	column-gap: .1rem;
 	flex-direction:row;
+	justify-content:center
+	
 }
 .main-nav a{
 	color: white;
 	text-decoration: none;
 }
+.main-nav a:hover{
+	color:#01ccff;
+}
+/*문서의 하단*/
+table, tr, th,td{
+	border-collapse: collapse;
+	border: 1px solid #333; /*테두리: 두께 종류 색상*/
+	margin: 3rem auto;
+}
+caption{
+	margin : 0 0 1rem 0;
+}
+.bold-text{
+	font-weight: bold;
+}
+table{
+	width: 600px;
+}
+th{
+	width: 25%;
+	font-weight: bold;
+	background-color:lightgray;
+}
+th.w75{width: 75%}
+
+th,td{
+	padding: 16px 10px;
+	text-align: center;
+}
+
+td.gap-{
+	text-align:left;
+	padding-left:3rem;
+}
+.text-mid{
+	vertical-align: middle;/*인라인 요소*/
+	background-color: #ffeded;
+}
+
+.warning{
+	color:red;
+}
+/*===============about : 프로그램 소개 페이지 스타일==================*/
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
+
+.page-map{
+	text-align:right;
+	max-width:1536px;
+	margin:0 auto;
+	padding: .5rem 0;
+	font-size: .875rem;
+}
+.page-map span{
+	font-size: .825rem;
+}
+.cover-story{
+	display:flex;
+	justify-content: space-between;
+}
+.overview{
+	max-width: 800px;
+	margin: 0 auto;
+}
+
+.sec-title{
+	text-align: center;
+	margin: 1.5rem 0;
+	font-weight: bold;
+	font-size:1.25rem;
+}
+.sec-title::first-letter{
+	background-color: black;
+	font-size: 2rem;
+	color:white;
+	padding: .5rem;
+}
+.cover-story, .profile-story{
+	display: flex;
+	column-gap: 1.375rem;
+	justify-content: space-between;
+}
+.cover-story img, .profile-story img{
+	width: 100%;
+	object-fit: cover;
+}
+
+.story p{
+	margin: 0 0 1.5rem 0;
+}
+.overview, .mc .castings, .guests{
+	margin: 100px auto;
+}
+.swiper {
+  width: 1000px;
+  height: 350px;
+  margin: 0 auto;
+}
+.swiper-slide ul{
+	display: flex;
+	height: 300px;
+	width:80%;
+	margin:0 auto;
+	justify-content: center;
+	column-gap: 1rem;
+}
+.swiper-slied ul li{
+	flex: 1 1 200px;
+	text-align: center;
+}
+.swiper-slied ul li p:nth-of-type(1){
+	margin: .5rem 0;
+	font-weight: bold;
+	font-size:1.125rem; 
+}
+.swiper-slied ul li p:nth-of-type(2){
+	font-size: .875rem;
+	text-align:left;
+	margin: 0.5rem;
+	line-height: 1.5;
+}
+.swiper-slied ul li img{
+	width: 100%;
+	object-fit: cover;
+}
+.swiper-scrollbar{
+	display: none;
+}
 .extra-nav{
 	background-color:#fafafa;
+	padding: .875rem 0;
+	border-top: 1px solid #e8e8e8;
 }
 .extra-nav ul{
 	display : flex;
+	column-gap:.875rem;
 	justify-content: center;
 	/*기본값이라서 따로 적지않는게 보통, 단 세로배치할때만 column*/
 	flex-direction:row;
@@ -28,6 +198,12 @@
 .extra-nav a{
 	color:#666;
 	text-decoration: none;
+	background-color:fafafa;
+}
+.extra-nav a:hover{
+	text-decoration: underline;
+	font-weight: bold;
+	color: #01ccff;
 }
 
 .sub-logo{
@@ -35,4 +211,9 @@
 }
 .site-info p{
 	text-align :center;
+	color:#999999;
+	margin:1rem;
+}
+.footer{
+	background-color:black;
 }
